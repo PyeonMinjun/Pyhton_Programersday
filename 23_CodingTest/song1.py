@@ -22,13 +22,11 @@ for _ in range(qt_cnt):
 # 0 1 /1 2/ 2 3 /3 4 
 
 #  ans = 물어보는 초
+
 k = 0
 for i in range(len(s_sec)):
     k += s_sec[i]
     ran.append(k)
-
-print(ran)
-
 
 
 for x in ans:
