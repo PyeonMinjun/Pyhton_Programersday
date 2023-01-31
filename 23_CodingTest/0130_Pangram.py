@@ -22,8 +22,9 @@
 # 예제 출력 3
 # YES
 
-# 방법 1 : for else 문
+
 # pangram = input()
+
 
 # for i in range(26):
 #     o = chr(i+65)
@@ -38,8 +39,6 @@
 #     print("YES")
 
 
-
-# 방법 2 : frag 사용
 pangram = input()
 frag = False
 
@@ -50,6 +49,7 @@ for i in range(26):
         if pangram.find(ou) == -1 :
             frag = True
             break
+    
 
 if frag:
     print("NO")
