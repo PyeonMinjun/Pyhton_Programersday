@@ -55,7 +55,7 @@ for x in range(N):
       result.append(pic)
 
 
-if len(result)==0:
+if len(result)== 0:
     print(len(result))
     print(0)
 else:
