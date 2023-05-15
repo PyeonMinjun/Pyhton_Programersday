@@ -25,7 +25,7 @@ for a in range(n-7): # 0~2
                     elif arr[i][j] != "W":
                         indexW += 1
         count.append(min(indexW,indexB))
-print(count)
+# print(count)
 print(min(count))
                     
     
