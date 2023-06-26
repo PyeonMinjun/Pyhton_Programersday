@@ -18,14 +18,7 @@ for cnt in range(n):
             val = i
         elif arr[i] == maxo:
             if val < i:
-                val = i
-               
-                    
-        
-        
-    
-    # if arr.count(max(arr)) > 1:
-    #      = max(arr)         
+                val = i 
 
     print("#{} {}" .format(cnt, val))
     
