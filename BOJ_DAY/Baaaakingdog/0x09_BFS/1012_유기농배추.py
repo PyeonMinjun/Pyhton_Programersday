@@ -18,7 +18,7 @@ def bfs(x,y):
                 vis[nx][ny] = True
                 q.append((nx,ny))
                 area += 1
-    return area
+    return 
         
         
         
