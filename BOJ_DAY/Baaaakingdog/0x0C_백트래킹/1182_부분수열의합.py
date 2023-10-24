@@ -1,0 +1,23 @@
+n,s = map(int,input().split())
+arr = list(map(int,input().split()))
+
+
+cnt = 0
+
+def func(cur, tot):
+    global cnt
+    
+    if cur == n:
+        if tot == s:
+            cnt += 1
+        return
+    
+    func(cur+1, tot)    
+    func(cur+1, tot+arr[cur])
+
+func(0,0)
+
+if s == 0:
+    cnt -= 1
+print(cnt)
+
