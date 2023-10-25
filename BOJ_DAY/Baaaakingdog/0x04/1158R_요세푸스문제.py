@@ -4,7 +4,6 @@ nxt = [0] * 5001
 
 
 
-
 # pre = [n if i == 1 else i-1 for i in range(1,n+1)]
 # nxt = [1 if i == n else i+1 for i in range(1,n+1)]
 
@@ -30,6 +29,5 @@ while n != 0:
     cur = nxt[cur]
             
 
-print("<"+", ".join(map(str,res))+">")
-    
+# print("<"+", ".join(map(str,res))+">")    
 print("<{}>" .format(", ".join(map(str,res))))
