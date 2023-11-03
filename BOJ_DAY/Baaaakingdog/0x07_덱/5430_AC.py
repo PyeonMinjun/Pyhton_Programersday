@@ -47,7 +47,7 @@ for _ in range(t):
         if i == 0:
             continue
         else:
-            arr.append(i)
+            arr.append((i))
             
     if flag:
         print("error")
