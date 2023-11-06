@@ -36,8 +36,8 @@ max_area = 0
 for i in range(n):
     for j in range(m):
         if board[i][j] == 1 and not visited[i][j]:
-        cnt += 1
-        max_area = max(max_area, bfs(i,j))
+            cnt += 1
+            max_area = max(max_area, bfs(i,j))
         
 
 print(cnt, max_area)

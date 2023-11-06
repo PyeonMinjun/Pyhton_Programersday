@@ -13,7 +13,7 @@ for i in range(len(n)):
         num *= 3
     
     elif n[i] == ')':
-        if stk[-1] != '(':
+        if not stk or stk[-1] != '(':
             print(0)
             exit(0)
             
@@ -26,7 +26,7 @@ for i in range(len(n)):
             
     
     elif n[i] == "]":
-        if stk[-1] != '[':
+        if not stk or stk[-1] != '[':
             print(0)
             exit(0)
         
