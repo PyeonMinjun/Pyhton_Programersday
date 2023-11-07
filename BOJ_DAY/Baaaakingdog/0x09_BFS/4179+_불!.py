@@ -36,7 +36,7 @@ while q1:
             continue
         dist1[nx][ny] = dist1[x][y] + 1
         q1.append((nx,ny))
-        
+
 while q2:
     x,y = q2.popleft()
 
@@ -45,28 +45,27 @@ while q2:
         ny = y + dy[i]
         
         if nx < 0 or nx >= n or ny <0 or ny >= m:
+            print(dist2[x][y]+1)
             print(dist1)
             print(dist2)
-            print(dist2[x][y]+1)
+    
             exit(0)
         
         if board[nx][ny] == "#" or dist2[nx][ny] >= 0 or board[nx][ny] == "F":
             continue
         
-        if dist1[nx][ny] != -1 and dist1[nx][ny] <= dist2[x][y]+1:
+        if dist1[nx][ny] <= dist2[x][y]+1:
             continue
+        # if dist1[nx][ny] > dist2[x][y]+1:
         dist2[nx][ny] = dist2[x][y] + 1
         q2.append((nx,ny))
 else:
     print("IMPOSSIBLE")
+
     
-    
+
 print(dist1)
 print(dist2)
-
-
-            
-            
     
     
             
