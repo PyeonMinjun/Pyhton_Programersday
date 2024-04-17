@@ -8,16 +8,16 @@ def solution(food_times,k):
     
     arr.sort()
     
-    diff = 0
+    pretime = 0
     for i, letter in enumerate(arr):
-        diff = letter[0]- diff
+        diff = letter[0]- pretime
         
         if diff != 0:
             spend = (diff * n)
             
             if k >= spend:      
                 k -= spend
-                diff = letter[0]
+                pretime = letter[0]
             else:
                 k %= n
                 sublist = sorted(arr[i:], key = itemgetter(1))
@@ -25,5 +25,3 @@ def solution(food_times,k):
         n -= 1
         
     return -1   
-
-print(solution([3,5,1,6,5,3],20))
