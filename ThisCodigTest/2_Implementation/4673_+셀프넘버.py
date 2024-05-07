@@ -1,7 +1,5 @@
 # 다른버전
-ns = set()
-
-for i in range(1,10001):
+def d(n):
     nsum = 0
     str_n= str(i)
     result = [str_n]
@@ -11,7 +9,11 @@ for i in range(1,10001):
     
     for i in result:
         nsum += int(i)
-    
+    return nsum
+
+ns = set()
+for i in range(1,10001):
+    nsum = d(i)
     
     if nsum < 10001:
         ns.add(nsum)
