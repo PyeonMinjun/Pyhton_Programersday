@@ -46,7 +46,6 @@ for i in range(m):
             flag = False
         mx = max(mx,dist[i][j])
 
-
 if flag:
     print(mx-1)
 else:
