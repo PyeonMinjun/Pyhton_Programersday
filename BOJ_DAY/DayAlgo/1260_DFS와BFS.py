@@ -14,15 +14,15 @@ for i in range(m):
     board[x][y] = True
     board[y][x] = True
 
+
 def dfs(v):
     print(v,end=" ")
+    vis2[v] = True
     for i in range(1,n+1):
         if not vis2[i]  and board[v][i]== True:
             vis2[v] = True
             dfs(i)
-            
-
-
+dfs(v)
 
 
 
@@ -36,19 +36,18 @@ def dfs(v):
 #             if not vis1[i]  and board[v][i]== True:
 #                 q.append(i)
 #                 vis1[i] = True
-vis2[v] = True
-dfs(v)
-print()
+
+# print()
 
 
-q = deque([v])
+# q = deque([v])
 
-while q:
-    v = q.popleft()
-    vis1[v]= True
-    print(v, end = " ")
-    for i in range(1,n+1):
-        if not vis1[i] and board[v][i]:
-            q.append(i)
-            vis1[i]= True
+# while q:
+#     v = q.popleft()
+#     vis1[v]= True
+#     print(v, end = " ")
+#     for i in range(1,n+1):
+#         if not vis1[i] and board[v][i]:
+#             q.append(i)
+#             vis1[i]= True
         
