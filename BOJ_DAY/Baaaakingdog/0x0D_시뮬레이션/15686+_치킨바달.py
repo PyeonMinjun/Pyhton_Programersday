@@ -15,25 +15,22 @@ def dfs(depth, start):
     val = 0
 
     if depth == m:
+        total_distance = 0
         # 좌표 계산
         for hr,hc in house:
-            dist = 2 * n
-            for cr, cc in select:
-                tmp = abs(hr-cr) + abs(hc-cc)
-                if tmp <  dist:
-                    dist = tmp
-            val += dist
-
-        if val < result:
-            result = min(val,result)
-            return
-
-    
+            min_distance = float('inf')
+            for idx in select:
+                cr, cc = chicken[idx]
+                distance = abs(hr-cr) + abs(hc-cc)
+                min_distance = min(min_distance,distance)
+            total_distance += min_distance
+        result  = min(result, total_distance)
+        return
     # 다음 치킨위치의 dfs
     for i in range(start, len(chicken)):
         # 배열에 담자.
-        select.append(chicken[i])
-        dfs(depth+1, start+1)
+        select.append(i)
+        dfs(depth+1, i+1)
         select.pop()
 
 chicken = []
@@ -49,7 +46,7 @@ for i in range(n):
             house.append((i,j))
 
 
-result = n * 2 * len(house)
+result = float('inf')
 
 dfs(0,0)
 print(result)
