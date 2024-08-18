@@ -4,7 +4,7 @@ from collections import deque
     
 # 입력값
 n,m = map(int,input().split())
-board = [list(map(int,input().split())) for _ in range(n)]
+board = [list(map(int,input().split())) for _ in range(n)] # 
 
 clean = []
 virus = []
@@ -12,11 +12,11 @@ existing_walls = []
 q = deque()
 dx = [0,-1,0,1]
 dy = [-1,0,1,0]
-vis = [[False]* m for _ in range(n)]
+vis = [[False]* m for _ in range(n)] # 
 
 # 0의 위치 값  
-for i in range(m):
-    for j in range(n):
+for i in range(n):
+    for j in range(m):
         if board[i][j] == 0:
             clean.append((i,j))
 
